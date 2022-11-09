@@ -29,7 +29,7 @@ sudo pip install ansible==4.1.0
 sudo pip install jinja2==3.0.1
 sudo pip install docker==2.2.1    --ignore-installed  --force-reinstall
 sudo pip install httplib2==0.9.2  --ignore-installed  --force-reinstall
-sudo pip install requests==2.10.0 --ignore-installed  --force-reinstall
+sudo pip install requests==2.25.1 --ignore-installed  --force-reinstall
 
 ansible --version
 ansible-playbook --version
