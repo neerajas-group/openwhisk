@@ -41,7 +41,7 @@ whisk_api_localhost_name_default: "localhost"
 # If you use a docker-machine on a mac use 'docker-machine'
 # If you want to deploy Openwhisk to other machines use 'distributed'
 environmentInformation:
-  type: "{{ environment_type | default('local') }}"
+  type: "{{ environment_type | default('distributed') }}"
 
 hosts_dir: "{{ inventory_dir | default(env_hosts_dir) }}"
 

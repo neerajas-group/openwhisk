@@ -1,0 +1,15 @@
+common/scala/build/libs/openwhisk-common-1.0.0-SNAPSHOT.jar
+core/controller/build/libs/openwhisk-controller-1.0.0-SNAPSHOT.jar
+core/cosmosdb/cache-invalidator/build/libs/openwhisk-cache-invalidator-cosmosdb-1.0.0-SNAPSHOT.jar
+core/invoker/build/libs/openwhisk-invoker-1.0.0-SNAPSHOT.jar
+core/monitoring/user-events/build/libs/openwhisk-user-events-1.0.0-SNAPSHOT.jar
+core/scheduler/build/libs/openwhisk-scheduler-1.0.0-SNAPSHOT.jar
+tools/admin/build/libs/openwhisk-admin-tools-1.0.0-SNAPSHOT.jar
+core/standalone/build/libs/openwhisk-standalone-1.0.0-SNAPSHOT.jar
+
+core/cosmosdb/cache-invalidator/build/distributions/cache-invalidator.tar
+core/monitoring/user-events/build/distributions/user-events.tar
+core/scheduler/build/distributions/scheduler.tar
+core/invoker/build/distributions/invoker.tar
+core/controller/build/distributions/controller.tar
+bin/openwhisk-standalone.jar
