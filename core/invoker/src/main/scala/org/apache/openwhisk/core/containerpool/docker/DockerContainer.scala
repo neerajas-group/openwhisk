@@ -88,7 +88,8 @@ object DockerContainer {
     // NOTE: --dns-option on modern versions of docker, but is --dns-opt on docker 1.12
     val dnsOptString = if (docker.clientVersion.startsWith("1.12")) { "--dns-opt" } else { "--dns-option" }
     val args = Seq(
-      "--cpu-shares",
+      // "--cpu-shares",
+      "--cpus",
       cpuShares.toString,
       "--memory",
       s"${memory.toMB}m",
