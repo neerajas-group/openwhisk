@@ -42,6 +42,7 @@ import org.apache.openwhisk.core.entity.types.EntityStore
  */
 case class ActionLimitsOption(timeout: Option[TimeLimit],
                               memory: Option[MemoryLimit],
+                              cpu: Option[CpuLimit],
                               logs: Option[LogLimit],
                               concurrency: Option[ConcurrencyLimit])
 
@@ -645,7 +646,7 @@ object WhiskActionMetaData
 }
 
 object ActionLimitsOption extends DefaultJsonProtocol {
-  implicit val serdes = jsonFormat4(ActionLimitsOption.apply)
+  implicit val serdes = jsonFormat5(ActionLimitsOption.apply)
 }
 
 object WhiskActionPut extends DefaultJsonProtocol {

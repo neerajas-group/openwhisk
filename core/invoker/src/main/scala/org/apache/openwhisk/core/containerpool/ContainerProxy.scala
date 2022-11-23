@@ -287,7 +287,7 @@ class ContainerProxy(factory: (TransactionId,
         job.exec.image,
         job.exec.pull,
         job.memoryLimit,
-        poolConfig.cpuShare(job.memoryLimit),
+        poolConfig.cpuShare(10, job.memoryLimit),
         None)
         .map(container =>
           PreWarmCompleted(PreWarmedData(container, job.exec.kind, job.memoryLimit, expires = job.ttl.map(_.fromNow))))
@@ -306,7 +306,7 @@ class ContainerProxy(factory: (TransactionId,
         job.action.exec.image,
         job.action.exec.pull,
         job.action.limits.memory.megabytes.MB,
-        poolConfig.cpuShare(job.action.limits.memory.megabytes.MB),
+        poolConfig.cpuShare(job.action.limits.cpu.cores, job.action.limits.memory.megabytes.MB),
         Some(job.action))
 
       // container factory will either yield a new container ready to execute the action, or

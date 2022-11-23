@@ -227,7 +227,7 @@ class FunctionPullingContainerProxy(
         job.exec.image,
         job.exec.pull,
         job.memoryLimit,
-        poolConfig.cpuShare(job.memoryLimit),
+        poolConfig.cpuShare(10, job.memoryLimit),
         None)
         .map(container => PreWarmData(container, job.exec.kind, job.memoryLimit, expires = job.ttl.map(_.fromNow)))
         .pipeTo(self)
@@ -241,7 +241,7 @@ class FunctionPullingContainerProxy(
         job.action.exec.image,
         job.action.exec.pull,
         job.action.limits.memory.megabytes.MB,
-        poolConfig.cpuShare(job.action.limits.memory.megabytes.MB),
+        poolConfig.cpuShare(job.action.limits.cpu.cores, job.action.limits.memory.megabytes.MB),
         None)
         .andThen {
           case Failure(t) =>

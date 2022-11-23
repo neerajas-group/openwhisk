@@ -13,3 +13,4 @@ core/scheduler/build/distributions/scheduler.tar
 core/invoker/build/distributions/invoker.tar
 core/controller/build/distributions/controller.tar
 bin/openwhisk-standalone.jar
+*.class
